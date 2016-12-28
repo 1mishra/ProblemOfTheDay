@@ -1,0 +1,630 @@
+POTD1
+
+You will be writing a program that prints out your name and age to stdout. TODO:
+
+    create a variable to hold your age
+    create a variable to hold your name
+    initialize the values of these two variables
+    write a main function that prints: "Hello world! My name is your_name and I am your_age years old." with a newline at the end where your_name and your_age are the values of your name and age variables.
+
+Text is stored in a string type in C++. We haven't gone over that in class yet, but a quick Google search should enlighten you how to use it.
+
+POTD2
+
+ You will be writing a program that ouputs the amount of time that has passed since Epoch.
+
+There are other data types besides strings, integers, and doubles. For example, some of C++'s date manipulation functions use the data type time_t.
+
+Write a program that prints out the time that has passed since the Epoch in 1) seconds, 2) hours, and 3) years (ignoring leap years, so each year is 365 days) each on a separate line. Integer division is acceptable.
+
+HINT: googling "c++ time since epoch" might be useful in finding functions to help you.
+Sample output:
+
+Seconds: 86400
+Hours: 24
+Years: 0
+
+POTD3
+
+
+You will be writing an pet class with the following variables:
+
+    name
+    birth_year
+    type (e.g., dog, cat, platypus)
+    owner_name
+
+and functions that allow you to access and set each of these variables. Make sure the names match up. For example, the birth_year variable should have getter get_birth_year and setter set_birth_year. In a comment, explain why you chose to make variables and functions private or public. 
+
+POTD4
+
+
+Write two constructors for the pet class you defined in question 3. The given code pet.cpp and pet.h contain the solution so you can start from there. One constructor should be the default constructor (how many arguments should it have?) and will assign the member variables the following values:
+
+    name: Rover
+    birth_year: 2016
+    type: dog
+    owner_name: Cinda
+
+The other constructor should take in the name, birth year, type, and owner of the pet as arguments and set the member variables accordingly.
+
+POTD5
+
+Write a program that does the following:
+
+    Creates an integer x on the stack with value 2016
+    Prints out the address of x and the value of x
+    Creates an integer pointer p on the stack
+    Assigns the pointer to point to x
+    Changes the value of x to 2017 via p
+    Prints out the address of x and its value using only p
+
+
+Sample Output:
+
+x is stored at address 0x7fff55a88a38 and has value 2016
+x is stored at address 0x7fff55a88a38 and has value 2017
+
+POTD6
+
+Write a program that does the following:
+
+    Creates an integer x on the stack with value 2016
+    Prints out the address of x and the value of x
+    Creates an integer pointer p on the HEAP
+    Assigns the pointer to point to x
+    Changes the value of x to 2017 via p
+    Prints out the address of x and its value using only p.
+    Make sure that your program has no memory leaks.
+
+Sample Output:
+
+x is stored at address 0x7fff55a88a38 and has value 2016
+x is stored at address 0x7fff55a88a38 and has value 201
+
+POTD7
+
+
+Write three broken programs:
+
+    nonCompile.cpp, a program that does not compile.
+    segFault.cpp, a program that segfaults when run.
+    leak.cpp, a program that leaks memory.
+
+Explain in the comments why each of these program fails.
+
+POTD8
+
+Create variable x on the stack which points to an array of 5 characters on the heap. Create a variable y on the stack that holds the address of x. Print out the value of y. Print out the sum of the ASCII values of the characters in your array. Make sure your program has no memory leaks.
+
+Sample output:
+
+The value of y is 0x7fff55a88a38.
+The sum of the characters is 532.
+
+POTD9
+
+Write code to free up the memory used. Be sure to set all pointers on the stack to point to NULL when they are no longer pointing to valid memory.
+
+POTD10
+
+TODO:
+
+    write a class food that has two private member variables: name and quantity
+    write the functions to access those private member variables
+    write the default constructor
+
+    write the function "increaseQuantity" that is not part of the class which increases the quantity of a food by one
+        this function should be called by passing a food object BY POINTER
+
+    write a main method that
+        creates an instance of the food class
+        prints out its quantity
+        calls increaseQuantity on it
+        prints out the new quantity
+
+Sample output:
+
+You have 5 apples.
+You have 6 apples.
+
+POTD11
+
+    Write a student class that has two private member variables: name and grade (e.g., 6, 11).
+    Write the functions to access those private member variables. Write the default constructor.
+    Write the function graduate that is not part of the class which increases the grade of a student by one. This function should be called by passing a student object by reference.
+    Write a main method that creates an instance of the student class, prints out the grade, calls graduate on it, and prints out the new grade.
+
+Sample output:
+
+Sally is in grade 5.
+Sally is in grade 6.
+
+POTD12
+
+    Write a program that prompts the user to enter 's' or 'c'. You should continue to prompt the user to enter 's' or 'c' until one of these characters is entered or until ‘q’ is entered.
+        ‘q’ should exit the program.
+
+    After the user enters 's' or 'c', prompt the user to enter a number.
+        You can assume the user will enter a valid number.
+        If the user entered 's' the print out sin(number) and return 0.
+        If the user entered 'c' print out cos(number) and return 0.
+
+POTD13
+
+    Write a function raise (not a program) that accepts an array of integers and an integer as the input parameters
+        The input array will have exactly one negative value as the very last element of the array
+
+        The function should create an array on the heap that contains the values of the input array each raised to the power of the second input parameter (besides the last negative element of the original array which should remain the same in the new array)
+            (HINT: there is a library function that might help you with this)
+        Return the starting address of this array
+
+        Include any libraries you use at the top of the file
+
+POTD14
+
+
+    Write a square class that has two member variables:
+        a double * length
+        a string name
+    Write a default constructor that assigns name to be "mysquare" and assign length to point to a double on the heap with value 2.0
+    Write the copy constructor and destructor for the square class
+        Have the copy constructor print out the line "I am copying!"
+    Write a main function that by doing two different things, causes the line "I am copying!" to be printed
+
+POTD15
+
+    Overload the + and = operators for the square class we have provided you
+        The = should make a deep copy of the square object
+        The + operator should concatenate the names of the two squares and add their lengths
+    Explain why we should be overloading the assignment operator in a comment
+
+POTD16
+
+    Write a class Animal
+        An Animal should have the type of animal as a string
+            This variable should only be able to be changed by functions of the animal class
+        An Animal should have the type of food the animal eats as a string
+            This variable should be able to be accessed by functions of the animal class as well as functions of derived classes
+        Write the accessor and mutator/getter and setter functions for each of these variables
+        write a function print (that is part of the Animal class) that prints out "I am a animal_type."
+            This method should be able to be overridden by derived classes
+        Write a default constructor for Animal that initializes animal_type to "cat" and food_type to "fish" and a constructor that accepts the type of the animal and type of food as parameters
+
+POTD17
+
+    Write a class Pet that is derived from the Animal class
+        In addition to the animal_type and food_type variables, Pet should have a private variable name and private variable owner_name
+        Write functions that get and set the type of food, name, and owner name of the pet class
+        Write a function print that prints "My name is __ __." where the blank is the value of the name variable
+        Write a default constructor for pet that initializes animal_type to cat, food_type to fish, name to "Fluffy", and owner_name to "Cinda" and a constructor that takes in the type of animal, type of food, name, and owner name as parameters
+    Create a main function
+        Produce the following output by calling only the print functions you have writen:
+
+I am a cat.
+My name is Garfield.
+
+POTD18
+
+    Write a templated class BankAccount
+        It should have a private member balance
+        It should have public functions
+            getBalance
+            add (accepts an amount, adds it to balance, returns nothing)
+            remove (accepts an amount, subtracts it from balance, returns nothing)
+            a constructor that takes in the initial balance as a parameter
+    Write a main function with two bank accounts
+        The first bank account should be able to store dollars and change
+        The second bank account is at a bank that refuses to accept change, so the amounts involved in transactions will only be integers
+        Each account should start with a $2000 balance
+        Add .50 to the first bank account and remove .50 from the second
+
+POTD19
+
+    Write a templated function more with takes in two variables of the same type and returns whichever variable is greater than (>) the other
+    Write a main method that uses the more function on two instances of the food class that has been provided for you to print out which food you have more of
+        (HINT: you might have to add something to the food class in order for more to be able to be called propperly.)
+
+For example, if we had 8 apples and 6 oranges than your program should output:
+
+We have more apples.
+
+POTD20
+
+    Write a program that prompts the user to enter a word and then convert that string to pig latin
+    Here is how you should convert a string to pig latin:
+        If the word starts with a vowel (a, e, i, o, u, y), tack "ay" onto the end of the word
+        If the word starts with a consonant (anything else), remove the consonants up to the first vowel, tack the consonants onto the end of the word, add "ay" onto the end of the word
+        If there are no vowels in the inputed word, just tack "ay" onto the end of the word
+    If the string is "q", your program should exit
+    You program should keep prompting and accepting strings until "q" is entered
+
+Sample input/output:
+
+input: east output: eastay
+
+input: n output: nay
+
+input: west output: estway
+
+POTD21
+
+
+    Write a program that takes an integer n from stdin as input, creates an nxn array of integers on the heap where each entry is the sum of its row index and column index (assume index starts at 0), and then prints out the values of the array by row
+        Make sure your program has no memory leaks!
+        You can assume the user enters a non-negative integer
+
+Sample output with n = 3
+
+0 1 2
+
+1 2 3
+
+2 3 4
+
+POTD22
+
+    Write a program that takes in an input string from stdin and prints out the character that appears most frequently in the string (regardless of case, e.g. in "Haha", "h" and "a" both appear twice)
+        You can assume the string will only contain upper and lowercase letters and spaces
+        (HINT: ask Google about the map data structure in the STL.)
+        If there is a tie in the frequency of two letters, print out the one that is alphabetically first
+
+Sample output with input string "Hello world":
+
+The most frequent character is l
+
+POTD23
+
+Write a method printList that accepts a node * (the head of the list) as a parameter and returns nothing. The method should print out the list in the following format:
+
+Example list: 1 2 3
+
+Node 0: 1
+Node 1: 2
+Node 2: 3
+
+If the list is empty then the function should print "Empty list"
+
+You can (and should) write a main method to test your funciton.
+
+POTD24
+
+
+Write an insertSorted method that returns nothing and accepts a node ** (the head of a linked list) and a node * (the node you will insert into the list) as parameters. Insert the new node into the list so the list remains in sorted order. If the value of the new node is already in the list you can insert it before or after the other node with the same value. You may assume that the list passed into the function is sorted (but might be empty). You can assume that the node * will never be NULL (you will always be inserting a node).
+
+Example: List: 1 2 3 5 Inserting: 4
+
+List: 1 2 3 4 5
+
+You can (and should, like really, really should) write a main method to test your funcitons.
+
+If you do not understand why a node** is being passed in, read the following:
+
+We are just passing a pointer "by pointer". What would happen if we just normally passed a node *head representing the head of the linked list into the function? We could still alter the node that head points to. But what if we want to change the head pointer itself? E.g., what if we wanted to insert a new node into the front of the list? If we just called the function like this: insertSorted(head, node) where head is a node *, then the memory address stored in the pointer is copied into the function. The function can change the pointer, but this will only change the copy of the pointer, not the pointer that lives outside the function. To change the address stored in the pointer we need to pass by pointer. The function call would then look like: insertNode(&head, node). We also could have passed the pointer by reference, though we would have to change the function signature to be: insertSorted(node * & head, node * n).
+
+POTD25
+
+
+Write a sortList method that accepts a node ** (the head of a linked list) as a parameter and returns nothing. It should sort the list passed in as a parameter and return a pointer to the sorted list's head. You may NOT call new. You need to rearrange the nodes that have already been allocated.
+
+You should be doing this at this point without prompting, but just in case: write a main method with test cases to see if your function works properly in all scenarios!
+
+POTD26
+
+Write a method shuffle that takes in two node * (the heads of two linked lists) as parameters and returns a node * (the head of a new list). The returned list should be the interleaving of the two lists, starting with the first list. For example:
+
+List 1: 0 2 4
+List 2: 1 3 5
+Returned list: 0 1 2 3 4 5
+
+List 1: 0 2
+List 3: 1 3 3 4
+Returned list: 0 1 2 3 3 4
+
+You may NOT call new. You need to rearrange the nodes that have already been allocated.
+
+Remeber to write a main method with test cases!
+
+POTD27
+
+
+Write a method intersection that takes in two node * (the heads of two linked lists) as parameters and returns a node * (the head of a new list). The returned list should be a new dynmically allocated linked list that has the values in the set intersection (no duplicates) of the two lists in sorted order.
+
+Example:
+
+List 1: 5 9 0 3 0
+List 2: 3 5 6 7 0 0
+Returned list: 0 3
+
+Something about writing a main method and test cases... oh that's right, you should be writing a main method with your own test cases!
+
+POTD28
+
+
+Look at the new node struct provided for you. This represents a node in a binary tree. Write a mehtod smoosh that accepts a node * (the root of a binary tree) and returns nothing. The method should transform a binary tree into a linked list in the following manner:
+
+Binary tree:
+     1
+    / \
+   2   5
+  / \   \
+ 3   4   6
+
+Linked list:
+1
+ \
+  2
+   \
+    3
+     \
+      4
+       \
+        5
+         \
+          6
+
+POTD29
+
+
+Write a method sortList that accepts a node ** (the head of a linked list) and returns nothing. The list will only contain integers 1, 3, and 5. The method should sort the linked list the linked list (with duplicates).
+
+Input: 3 5 1 1 3 5
+Output: 1 1 3 3 5 5
+
+POTD30
+
+Create a class Stack. The stack should be implemented with a dynamically allocated linked list (you may want to make a listnode struct/class within Stack).
+
+Implement the following member functions of the stack class - int size() - returns the number of elements in the stack (0 if empty) - bool isEmpty() - returns if the list has no elements, else false - void push(int val) - pushes an item to the stack in O(1) time - int pop() - removes an item off the stack and returns the value in O(1) time - You should also implement the constructor which accepts no arguments and creates an empty stack, and a destructor for the class.
+
+POTD31
+
+Create a class Queue. The queue should be implemented with a dynamically allocated linked list (you may want to make a listnode struct/class within Queue).
+
+Implement the following member functions of the queue class: - int getSize()- returns the number of elements in the queue (0 if empty) - bool isEmpty()- returns if the list has no elements, else false - void push()- pushes an item to the queue in O(1) time - int pop()- removes an item off the queue and returns the value in O(1) time - You should also implement the constructor which accepts no arguments and creates an empty queue, and a destructor for the class.
+
+POTD32
+
+
+TODO:
+
+Write a method called requeue that accepts a node ** head (the head of a linked list) and an int times and returns nothing. The method should change the list as if the list were a queue (with the head being where we pop from) and pop followed by push were called times times on the queue. Make sure that head points to the new head of the linked list when you return. For example:
+
+Input: 1->2->3->4->5->NULL, times = 3
+Output: 4->5->1->2->3->NULL
+
+Input: 1->2->3->4->5->NULL, times = 6
+Output: 2->3->4->5->1->NULL
+
+POTD33
+
+
+TODO: * You will be writing a weather predicting program * A user will input a city state pair and you will output what the weather will be the next day * You will do so by hashing the string to a value between 0 and 3 * You must write a hash function that determines which of 0, 1, 2, or 3 a string hashes to. The function will determine this by summing all of the ASCII values of the characters in the string and then using the modulus operator to force the value into the bounds of [0,3] * Your program should call the hasing function you wrote and then output what the string hashed to and a different weather prediction for each hash value.
+
+Sample inputs and outputs:
+
+Input: Dallas, Texas
+
+Output:
+
+Dallas, Texas hashed to value 2
+It will be sunny all day tomorrow.
+
+Input: Chicago, Illinois
+
+Output:
+
+Chicago, Illinois hashed to value 1
+There will be a tornado tomorrow. Plan your day accordingly.
+
+POTD34
+
+
+    You will be writing a forutne telling program (similar to a magic 8 ball)
+        Your program should take in a question from the user ending in a question mark
+            (if the string does not end in a ? then print an error message and return 1)
+        The string should be be less than or equal to 100 characters but greater than 1
+            (if it isn't, print an error message and return 1)
+        You should write a hashing function of your choice that maps the input string to one of the values 0, 1, 2, 3, 4
+        Your hash function must be deterministic and depend on the input string (maybe your function depends on the length of the string, the numbe of spaces, the ascii value of the characters, or all of the above!)
+            It cannot be the same as the hash function you wrote for the last question
+        Your program should ouput what the input string hashed to and an answer to their question
+
+Sample inputs and outputs:
+
+Input: Will I get an A on my test?
+
+Output:
+
+Will I get an A on my test? hashed to value 3
+The outlook is bleak.
+
+POTD35
+
+    Create an empty text file named test.txt in your current directory
+    Write a program that:
+        Writes two lines to the file
+        Then opens the file and read the two lines in and print them to stdout
+        Make sure that your program does not leak any resources (e.g., not closing open files)
+
+POTD36
+
+    Write a program that reads a file called text.txt line by line and prints out all of the lines that have the string "purple" in them
+    In a text file called testcases.txt, write
+        three differnt testcases (what the contents of text.txt would look like)
+        why you chose those test cases, and what you would expect the outputs to be
+        Then alter the contents of text.txt to see if your program produces the expected output for your test cases
+
+POTD37
+
+
+    Write a program that takes a positive integer x from stdin and either prints if x is prime, or if it is not prime, prints out the numbers less than x that evenly divide x
+        You can assume that the input will be an integer
+    Create a text file called testcases.txt and in it write
+        3 inputs
+        what you expect the output to be
+        and why you chose them
+
+Sample inputs and outputs:
+
+Input: 5
+
+Output: 5 is prime
+
+Input: 6
+
+Output: 1 2 3 divide 6
+
+POTD38
+
+    Create a file func.h that declares two functions
+        The first is a function secretKey that takes in no parameters, prints the secret key to stdout, and returns the secret key as a string
+            The secret key can be whatever you want with the restriction that it must only be made up of upper and lowercase letters
+        The second is a void function encrypt which takes in a string of letters and prints an encrypted version of the string to stdout
+            You can encrypt the string however you would like with three rules:
+                the encrypted string cannot be exactly the same as the original string
+                the encryption must be determninistic
+                the encryption must be unique(only one string maps to one output)
+        Implement these functions in a file func.cpp
+    Write a program main.cpp that utilizes these two functions to print out the encryption of the secret key
+        main.cpp can only include one file (there is no limit on how many files the other files can include)
+    We have provided a Makefile that will compile your main program as long as you named your files func.h, func.cpp, and main.cpp .
+        Run make to compile
+    In a comment in your main.cpp file explain why it might be important to break the code up into a .h and .cpp file
+
+Sample output:
+
+The secret key is purplerocks
+The encryption of the secret key is sxusohurfnv
+
+POTD39
+
+    Write a function reverse that takes in one string as an argument and returns the reversal of the string
+    Write a main function that calls your reverse method with the inputs 522SC, SI, and LOOC and print the results on separate lines to stdout.
+
+Sample input and output to reverse:
+
+Input: hello
+
+Output: olleh
+
+POTD40
+
+    You are going write a program that cracks a caesar cipher
+    You have intercepted a secret message from the CS225 TAs that says when the next 225 pop quiz will be and what it will cover. The only thing is, it has been encrypted with a caesar cipher. You only know one piece of information: the message conatians the phrase "pop quiz" at least once in it
+        (HINT: only one shift amount will result in "pop quiz" appearing in the string)
+    The message is in the file encrypted.txt
+        It contains only uppercase letters and spaces
+    Write a program that decrypts the message and writes it to a file decrypted.txt
+    In a comment write what the runtime of your algorithm is in terms of n, the number of letters in the input message
+
+POTD41 - 44
+
+- 41
+Over the next three questions you are going to be writing an n × n tic-tac-toe program (https://en.wikipedia.org/wiki/Tic-tac-toe). As an overview, your program will prompt the user to enter an integer n which will determine the size of the board (n × n). No matter what the board size, you will need to get only 3 in a row to win. Your program will then prompt the two users to input where they would like to go until someone wins or the board is full.
+
+We require you to write three helper functions to complete this program, but feel free to write as many as you need. First you must choose how you are going to store the game board data- whether each square on the board is empty, has an X, or has an O. What data structure would work the best in terms of ease of access, speed of access, storage required?
+
+TODO: * Today you will be writing a helper method that accepts user input as to where they would like to place and X or O * You can accept the input in whatever form you would like, just be sure to prompt the user so they know the correct format * You should continue to prompt the user for input if they enter invalid input (if they try to play in a square that is beyond the dimmensions of the board or a square that is already filled)
+
+- 42
+
+Write a helper method that prints out the current board to stdout. For example, if each player made one move, the board might look like:
+
+X  |   |
+___|___|___
+   |O  |  
+___|___|___
+   |   |  
+   |   |
+
+(Please feel free to make a better looking board)
+
+- 43
+
+Write a helper mehtod that checks if someone has won.
+
+- 44
+
+Put all of your helper functions together and write the main method for your tic-tac-toe program!
+
+POTD45
+
+
+Write a main method in q45.cpp that passes the correct parameters into functions 1--6 so that they print the following:
+
+Hail to the Orange.
+
+Hail to the Blue.
+
+Hail Alma Mater,
+
+Ever so true.
+
+We love no other,
+
+So let our motto be
+
+Victory, Illinois, Varsity.
+
+Do NOT change the functions themselves.
+
+POTD46
+
+    Look at the code provided in q46.cpp. You can modify the classes and functions as necessary
+    Using your knowledge of polymorphism, create an array of objects created on the stack to input into the printColors function that results in the following output:
+
+Fruits come in a variety of colors.
+
+Foods come in a variety of colors.
+
+A banana is yellow.
+
+A strawberry is red.
+
+POTD47
+
+
+    Ever wonder what that #define and #ifndef stuff is at the beginning of classes? Read this tutorial If you need a review on macros in general, this might help.
+    Write a program that defines one macro that substitutes some text of your choosing with the string "purple" and another macro IAMDEFINED that does not get substituted with anything
+    Write a main function that prints out "purple is a great color" only if IAMDEFINED is defined using your macros
+    In a comment explain what a header guard is and why they are useful
+
+POTD48
+
+    You will be writing a program that utilizes the const keyword in different ways.
+    If you need a review of const (particularly const pointers) you might want to check out this tutorial
+    In a new file do the following:
+        Write a class Circle that has one member: double radius, and accessor and mutator methods for this member variable.
+        Write a function print that takes in a Circle object as a parameter and prints out I am a circle. My radius is followed by the value of radius
+            Make sure that the actual Circle object that you pass in as a parameter is used by the funciton (not a copy of the Circle, that is pass by ____)
+            Signify to the compiler that the print function will not alter the Circle parameter. Now alter the method so it calls setRadius. Write in a comment what happens when you try to compile/run (with an empty main method). Comment out the setRadius line.
+    Write a main method that
+        Creates a Circle object and set it's radius to some value
+        Next create two pointers to the Circle you created
+            The first pointer must be constant in the sense that you cannot change the Circle object the pointer points to
+            The second must be constant in the sense that you cannot what the pointer points to (i.e., you cannot do the following: int * x = p; x = q; where p and q are integers)
+        Print out the following using the first pointer: The radius is followed by the radius value.
+
+
+POTD49 
+
+The student employment office has asked you to write a bit of code to help them keep track of student time cards. You can (and should) utilize STL data structures in this problem.
+
+TODO:
+* Declare the data structure that will be used to hold the time card information as a global variable (in practice you would not store all of your data in a global variable, but for our purposes it makes life easier)
+* The following is the required information and functionality of time cards:
+    * The records should be able to be looked up by student UIN
+    * For each student UIN there needs to be a list of time enteries that consist of the amount of time spent working in minutes and a description of what they did
+* Your main method should continue to do the following until "n" is entered:
+    * Prompt the user to enter a UIN
+    * Prompt the user to enter an amount of time in minutes (assume the user rounds to the nearest minute)
+    * Prompt the user to enter a description of the task they performed
+    * Ask the user if they would like to enter another time entry (y/n)
+    * You can assume the user will enter valid input
+* Write a helper method called addTime(int uin, int time, string task) that adds this information to the data structure. 
+
+Sample input:
+123456789
+60
+Proctored exam 1
