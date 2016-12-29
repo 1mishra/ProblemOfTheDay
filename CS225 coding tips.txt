@@ -1,0 +1,27 @@
+Hey guys! With Exam Three on the horizon and interview season underway, I thought it would be helpful to share this resource with you:
+ 
+https://www.hackerrank.com/domains/data-structures/trees/difficulty/all/page/1
+ 
+(This links specifically to the data structures section of the website)
+ 
+If you don’t know, HackerRank is a website that offers a ton of different coding questions. You can program in browser and get instant feedback. Student to student, I think this is a great resource not only for applying and practicing what you have learnt in class, but also just in general for getting ready for interviews and fine tuning your coding skills. 
+ 
+When it comes to doing these questions, I highly reccomend setting a timer because you will have a time limit both during exams and during interviews. Also try doing these closed book because again, you won’t have notes with you when it matters. 
+ 
+If you are still a bit rusty with general C++, you can check out their C++ section here: 
+ 
+https://www.hackerrank.com/domains/cpp/cpp-introduction
+ 
+ 
+And if you like this site and you want even more practice, check out leetcode.com (this website doesn’t have a nice interface like hacker rank but they still have some good problems)
+ 
+Also, another great way to study for exams specifically is to add more functions to your labs (and MPs).  A CA (Milan) gave me this advice last semester and it was super helpful when preparing for the exams. Think of some functions you could add and implement them! This is a great way to both learn how to build upon already existing code and also provide a good way to wrestle with compiler errors and learn how to write your own test cases completely from scratch. 
+ 
+Finally, there are some coding questions which are on the practice exams that we post on our course site. You can also practice coding those up and checking your answers with the provided answers (or if there are no provided answers, you can write your own test cases and make sure the code produces the correct output). 
+ 
+I know it can be hard to practice your programming skills because unlike math and science class, there aren't many resources that allow for a lot of application (besides our POTDs, which rock btw, those are an amazing resource). Hopefully these few tips can help when it comes to practicing your programming skills and preparing for the exams!
+ 
+Good Luck!
+Genna
+ 
+#pin
